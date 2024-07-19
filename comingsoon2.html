@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Coming-Soon</title>
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Poppins, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+      left: 70%;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .backdrop-blur-lg {
+      backdrop-filter: blur(10px);
+      /* Adjust the blur intensity as needed */
+    }
+    
+    .mySlides {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s;
+    }
+
+    .mySlides.show {
+    display: block;
+    opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+
+  <body>
+    <!-- <div class="flex h-screen bg-cover mySlides" style="background-image: url('/src/img/bg-santri.jpg');">
+    <div class="flex h-screen bg-cover mySlides" style="background-image: url('/src/img/group-user.png');"> -->
+      <div class="absolute z-0 bg-gray-200 w-full h-full">
+        <!-- <div class="bg-cover">
+        </div> -->
+        
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <!-- <div class="h-screen w-screen bg-cover bg-center bg-no-repeat mySlides" style="background-image: url('./img/pesantren/pesantren3.jpg')"></div>   -->
+              <img src="./img/pesantren/pesantren3.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <!-- <div class="h-screen w-screen bg-cover bg-center bg-no-repeat mySlides" style="background-image: url('')"></div> -->
+              <img src="./img/pesantren/pesantren1.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+          <!-- <div class="h-screen w-screen bg-cover bg-center bg-no-repeat mySlides" style="background-image: url('./img/pesantren/pesantren2.jpg')"></div> -->
+              <img src="./img/pesantren/pesantren2.jpg" alt="">
+            </div>
+            <!-- <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div> -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    <div class="flex z-50">
+      <div class="bg-opacity-75 bg-white h-screen backdrop-blur-lg w-2/5 flex justify-center">
+        <!-- Content -->
+        <div class="text-center text-gray-700 content-center">
+          <div class="">
+            <div class="flex justify-center mt-4 mb-4">
+              <img src="./img/logo-pesantrenku.png" alt="" class="justify-center" width="120px">
+            </div>
+            <h1 class="text-4xl font-bold"> COMING SOON!</h1>
+            <p class="mt-4 font-light text-base">Selamat Datang di Pesantren Darul Fattah. <br>Menyediakan Pendidikan Berkualitas dan Pengembangan
+              Karakter</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-3/5">
+      </div>
+    </div>
+
+    <audio autoplay loop>
+      <source src="./audio/audio-islami1.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+        
+      },
+    });
+  </script>
+  <!-- Initialize Swiper -->
+  <script src="./script.js"></script>
+  <!-- <script>
+    let daysId = document.getElementById('days');
+    let hoursId = document.getElementById('hours');
+    let minutesId = document.getElementById('minutes');
+    let secondsID = document.getElementById('seconds');
+
+    function countdown() {
+      console.log('wooo', daysId);
+      let countDownDate = new Date("Jul 16, 2024 15:37:25").getTime();
+      let now = new Date().getTime();
+      let distance = countDownDate - now;
+      let days = Math.floor(distance / (1000 * 60 * 60 * 24)) >= 10 ? Math.floor(distance / (1000 * 60 * 60 * 24)) : '0' + Math.floor(distance / (1000 * 60 * 60 * 24));
+      let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) >= 10 ? Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) : '0' + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) >= 10 ? Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)) : '0' + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      let seconds = Math.floor((distance % (1000 * 60)) / 1000) >= 10 ? Math.floor((distance % (1000 * 60)) / 1000) : '0' + Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysId.innerHTML = days
+      hoursId.innerHTML = hours
+      minutesId.innerHTML = minutes
+      secondsID.innerHTML = seconds
+
+    }
+
+    setInterval(() => {
+      countdown();
+    }, 1000);
+
+    var swiper = new Swiper(".mySwiper", {
+      autoplay: {
+        delay: 2500,
+        // disableOnInteraction: false
+      },
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script> -->
+
+</html>

@@ -1,4 +1,7 @@
 {
   "livePreview.defaultPreviewPath": "/index.html",
-  "files.associations": { "*.scss": "postcss" }
+  "files.associations": {
+    "*.scss": "postcss"
+  },
+  "liveServer.settings.port": 5501
 }
