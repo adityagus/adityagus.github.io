@@ -63,7 +63,9 @@
     "yaml": "^1.10.2"
   },
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "serve": "php -S localhost:3000"
   },
   "keywords": [],
   "author": "",
